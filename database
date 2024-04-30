@@ -1,0 +1,29 @@
+CREATE TABLE Races (
+RaceId INT PRIMARY KEY,
+Where VARCHAR(100),
+From VARCHAR(100)
+);
+
+CREATE TABLE ClientInfo (
+Id INT PRIMARY KEY,
+Name VARCHAR(50),
+Surname VARCHAR(50),
+Email VARCHAR(100),
+Phone VARCHAR(20),
+Passport VARCHAR(20),
+Gender VARCHAR(10),
+Birthday DATE
+);
+
+CREATE TABLE Tickets (
+TicketId INT PRIMARY KEY,
+RaceId INT,
+ClientId INT,
+Price DECIMAL(10,2),
+Date DATE,
+Time TIME,
+Type VARCHAR(20),
+Plane VARCHAR(50),
+FOREIGN KEY (RaceId) REFERENCES Races(RaceId),
+FOREIGN KEY (ClientId) REFERENCES ClientInfo(Id)
+);
