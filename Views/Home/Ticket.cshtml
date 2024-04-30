@@ -1,0 +1,26 @@
+﻿@model Ticket
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="ticket">
+                <h2 class="text-center mb-4">Посадочный билет @Model.ClientId</h2>
+                <div class="row">
+                    <div class="col-6">
+                        <p><strong>Самолёт:</strong> @Model.Plane</p>
+                        <p><strong>Дата:</strong> @Model.Date.ToShortDateString()</p>
+                        <p><strong>Откуда</strong> @Model.Races.From</p>
+                        <p><strong>Время посадки</strong> @Model.Time.ToShortTimeString()</p>
+                    </div>
+                    <div class="col-6">
+                        <p><strong>Место</strong> 14A</p>
+                        <p><strong>Куда</strong> @Model.Races.Where</p>
+                        <p><strong>Время прибытия</strong> @Model.Time.ToShortTimeString()</p>
+                        <p><strong>Выход:</strong> B12</p>
+                    </div>
+                </div>
+                <hr>
+                <p class="text-center">Хорошего полёта!</p>
+            </div>
+        </div>
+    </div>
+</div>

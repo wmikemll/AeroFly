@@ -1,0 +1,56 @@
+﻿<section class="u-align-left u-clearfix u-container-align-center u-image u-shading u-section-buy" id="carousel_1a2e" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-expanded-width u-list u-list-1">
+            <div class="u-repeater u-repeater-1">
+                <div class="container">
+                    <h2>Добавить билеты</h2>
+                    <form method="POST">
+                        <div class="form-group">
+                            <label for="date">Дата</label>
+                            <input type="date" class="form-control" id="date" name="date">
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Время</label>
+                            <input type="time" class="form-control" id="time" name="time">
+                        </div>
+                        <div class="form-group">
+                            <label for="type">Тип:</label>
+                            <select class="form-control" id="type" name="type">
+                                <option value="Standard">Стандарт</option>
+                                <option value="Comfort">Комфорт</option>
+                                <option value="Business">Бизнес</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="Race">Рейс:</label>
+                            <select class="form-control" id="raceId" name="raceId">
+                                @foreach (Races race in Model)
+                                {
+                                    <option value=@race.Id>@race.From - @race.Where</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="form-group"> 
+                            <label for="date">Количество билетов</label>
+                            <input type="number" class="form-control" id="count" name="count">
+                        </div>
+                        <div class="form-group">
+                            <label for="price">Цена</label>
+                            <input type="number" min="1" step="any" class="form-control" id="price" name="price">
+                        </div>
+                        <div class="form-group">
+                            <label for="price">Самолёт</label>
+                            <input class="form-control" id="plane" name="plane">
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="margin-top: 5%; margin-bottom:5%">Добавить</button>
+                    </form>
+                </div>
+
+                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/@@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            </div>
+        </div>
+    </div>
+</section>
+

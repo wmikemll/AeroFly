@@ -1,0 +1,61 @@
+﻿<section class="u-align-left u-clearfix u-container-align-center u-image u-shading u-section-buy" id="carousel_1a2e" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-expanded-width u-list u-list-1">
+            <div class="u-repeater u-repeater-1">
+                <div class="container">
+                    <h2>Покупка билета</h2>
+                    <form method="POST">
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Телефон:</label>
+                            <input type="tel" class="form-control" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="passport">Серия и номер паспорта:</label>
+                            <input type="text" class="form-control" id="passport" name="passport">
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <label for="last_name">Фамилия:</label>
+                                <input type="text" class="form-control" id="last_name" name="last_name">
+                            </div>
+                            <div class="col">
+                                <label for="first_name">Имя:</label>
+                                <input type="text" class="form-control" id="first_name" name="first_name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dob">Дата рождения:</label>
+                            <input type="date" class="form-control" id="dob" name="dob">
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Пол:</label>
+                            <select class="form-control" id="gender" name="gender">
+                                <option value="male">Мужской</option>
+                                <option value="female">Женский</option>
+                                <option value="other">Другой</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="Race">Рейс:</label>
+                            <select class="form-control" id="raceId" name="raceId">
+                                @foreach (Races race in ViewBag.Races)
+                                {
+                                    <option value=@race.Id>@race.From - @race.Where</option>
+                                }
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="margin-top: 5%; margin-bottom:5%">Купить билеты</button>
+                    </form>
+                </div>
+
+                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/@@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            </div>
+        </div>
+    </div>
+</section>
